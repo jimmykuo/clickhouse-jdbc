@@ -229,6 +229,8 @@
                                     <include>org.apache.httpcomponents:*</include>
                                     <include>commons-logging:*</include>
                                     <include>commons-codec:*</include>
+                                    <include>net.jpountz.**</include>
+                                    <include>javax.xml.**</include>
                                 </includes>
                             </artifactSet>
                             <relocations>
@@ -245,6 +247,20 @@
                                     <shadedPattern>ru.yandex.repackaged.org</shadedPattern>
                                     <includes>
                                         <include>org.apache.**</include>
+                                    </includes>
+                                </relocation>
+                                <relocation>
+                                    <pattern>net</pattern>
+                                    <shadedPattern>ru.yandex.repackaged.net</shadedPattern>
+                                    <includes>
+                                        <include>net.jpountz.**</include>
+                                    </includes>
+                                </relocation>
+                                <relocation>
+                                    <pattern>javax</pattern>
+                                    <shadedPattern>ru.yandex.repackaged.javax</shadedPattern>
+                                    <includes>
+                                        <include>javax.xml.**</include>
                                     </includes>
                                 </relocation>
                             </relocations>
